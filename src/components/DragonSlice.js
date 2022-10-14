@@ -8,7 +8,18 @@ const initialState = [
 const dragonsSlice = createSlice({
   name: "dragons",
   initialState,
-  reducers: {},
+  reducers: {
+    dragonUpdated(state, action) {
+        const { name, age } = action.payload;
+        const existingDragon = state.find((dragon) => dragon.name === name);
+        if (existingDragon) {
+            existingDragon.name = name;
+            existingDragon.age = age;
+        }
+      },
+  },
 });
+
+export const { dragonUpdated } = dragonsSlice.actions;
 
 export default dragonsSlice.reducer;

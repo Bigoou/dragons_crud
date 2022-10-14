@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
+import {Link} from "react-router-dom";
 
 function DragonList() {
 
@@ -33,7 +34,9 @@ function DragonList() {
                                 <td>{age}</td>
                                 <td>
                                     <button>Delete</button>
-                                    <button>Edit</button>
+                                    <Link to={`/edit-dragon/${name}`}>
+                                        <button>Edit</button>
+                                    </Link>
                                 </td>
                             </tr>
                         ))}
