@@ -19,7 +19,7 @@ function DragonList() {
                 </div>
             </div>
             <div className="row">
-                <table class="u-full-width">
+                <table className="u-full-width">
                     <thead>
                         <tr>
                             <th>name</th>
