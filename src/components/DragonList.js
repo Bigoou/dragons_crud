@@ -5,6 +5,10 @@ function DragonList() {
 
     const dragons = useSelector((state) => state.dragons);
 
+    // Route to AddDragon component
+
+    
+
     return (
         <div className="container">
             <div className="row">
@@ -15,7 +19,7 @@ function DragonList() {
                     <button className="button-primary">Load dragons</button>
                 </div>
                 <div className="two columns">
-                    <button className="button-primary">Add dragon</button>
+                <a href="/add-dragon">Add Dragon</a>
                 </div>
             </div>
             <div className="row">

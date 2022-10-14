@@ -8,7 +8,14 @@ const initialState = [
 const dragonsSlice = createSlice({
   name: "dragons",
   initialState,
-  reducers: {},
+  reducers: {
+    addDragon: (state, action) => {
+      state.push(action.payload);
+    }
+
+  },
 });
+
+export const { addDragon } = dragonsSlice.actions;
 
 export default dragonsSlice.reducer;
